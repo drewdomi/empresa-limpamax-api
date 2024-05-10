@@ -9,16 +9,23 @@
   "keywords": [],
   "scripts": {
     "dev": "tsx --watch src/app.ts",
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix src/",
     "build": "tsc"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.11",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "^9.2.0",
+    "globals": "^15.2.0",
     "node": "^20.11.1",
     "prisma": "^5.13.0",
     "tsx": "^4.9.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.8.0"
   },
   "dependencies": {
     "@prisma/client": "5.13.0",
