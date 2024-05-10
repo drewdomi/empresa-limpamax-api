@@ -1,0 +1,16 @@
+{
+  "name": "starter-api",
+  "version": "0.0.1",
+  "main": "index.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": "",
+  "description": "",
+  "keywords": [],
+  "scripts": {
+    "dev": "",
+    "build": ""
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
