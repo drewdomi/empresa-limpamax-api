@@ -1,0 +1,9 @@
+services:
+  postgres-bitnami:
+    image: bitnami/postgresql
+    ports:
+      - 5431:5432
+    environment:
+      - POSTGRESQL_USERNAME=joao
+      - POSTGRESQL_PASSWORD=dev
+      - POSTGRESQL_DATABASE=mydb
