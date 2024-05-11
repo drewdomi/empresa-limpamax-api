@@ -11,7 +11,7 @@ export const loginSchema = z.object({
       .string({
         message: 'Email or password invalid',
       })
-      .min(4, 'Email or password invalid')
+      .min(8, 'Email or password invalid')
       .trim()
       .refine(s => s.includes(' '), 'Email or password invalid'),
   }),

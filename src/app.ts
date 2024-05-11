@@ -1,4 +1,3 @@
-import http from 'node:http'
 import express from 'express'
 import cors from 'cors'
 import { Request, Response } from 'express'
@@ -21,17 +20,12 @@ app.use(
   }),
 )
 
-app.use(routes)
-
 app.get('/', (_req: Request, res: Response) => {
   res.send('API Running at port 3000')
 })
 
-const server = http.createServer(app)
-server.on('error', error => {
-  console.log(error)
-})
+app.use(routes)
 
-server.listen(port, () => {
+app.listen(port, () => {
   console.log('API running on port ' + port)
 })
