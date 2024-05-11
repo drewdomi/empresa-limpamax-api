@@ -2,6 +2,7 @@ import http from 'node:http'
 import express from 'express'
 import cors from 'cors'
 import { Request, Response } from 'express'
+import { routes } from './core/routes'
 
 const app = express()
 const port = 3000
@@ -19,6 +20,8 @@ app.use(
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
   }),
 )
+
+app.use(routes)
 
 app.get('/', (_req: Request, res: Response) => {
   res.send('API Running at port 3000')
