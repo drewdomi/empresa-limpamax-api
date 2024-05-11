@@ -5,6 +5,7 @@ import { routes } from './core/routes'
 
 const app = express()
 const port = 3000
+const exampleResponse = 'API running http://localhost:' + port
 
 app.use(express.json())
 
@@ -21,11 +22,11 @@ app.use(
 )
 
 app.get('/', (_req: Request, res: Response) => {
-  res.send('API Running at port 3000')
+  res.send(exampleResponse)
 })
 
 app.use(routes)
 
 app.listen(port, () => {
-  console.log('API running http://localhost:' + port)
+  console.log(exampleResponse)
 })

@@ -4,7 +4,7 @@ import bcrypt from 'bcrypt'
 
 const prisma = new PrismaClient()
 
-export const authService = {
+export const accountService = {
   async login(req: Request, res: Response) {
     const { email, password } = req.body
 
