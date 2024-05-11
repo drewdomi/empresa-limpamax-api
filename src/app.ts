@@ -27,5 +27,5 @@ app.get('/', (_req: Request, res: Response) => {
 app.use(routes)
 
 app.listen(port, () => {
-  console.log('API running on port ' + port)
+  console.log('API running http://localhost:' + port)
 })

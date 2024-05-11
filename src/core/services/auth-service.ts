@@ -1,11 +1,11 @@
 import { PrismaClient } from '@prisma/client'
-import bcrypt from 'bcrypt'
 import { Request, Response } from 'express'
+import bcrypt from 'bcrypt'
 
 const prisma = new PrismaClient()
 
-export class AuthControler {
-  static async login(req: Request, res: Response) {
+export const authService = {
+  async login(req: Request, res: Response) {
     const { email, password } = req.body
 
     try {
@@ -37,5 +37,5 @@ export class AuthControler {
     } catch (error) {
       return res.status(500).json({ message: 'Internal Server Error' })
     }
-  }
+  },
 }
