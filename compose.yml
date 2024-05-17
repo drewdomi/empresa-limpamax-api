@@ -1,9 +1,9 @@
 services:
-  postgres-bitnami:
-    image: bitnami/postgresql
-    ports:
-      - 5431:5432
+  mongodb:
+    image: 'bitnami/mongodb:latest'
     environment:
-      - POSTGRESQL_USERNAME=joao
-      - POSTGRESQL_PASSWORD=dev
-      - POSTGRESQL_DATABASE=mydb
+      MONGODB_ROOT_USER: joao
+      MONGODB_ROOT_PASSWORD: dev
+      MONGODB_DATABASE: mydb
+    ports:
+      - 27017:27017
