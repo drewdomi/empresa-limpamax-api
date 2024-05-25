@@ -6,5 +6,6 @@ import { accountService } from '../services/account-service'
 const accountRouter = Router()
 
 accountRouter.post('/login', zodMiddleware(loginSchema), accountService.login)
+accountRouter.post('/register', accountService.register)
 
 export { accountRouter }

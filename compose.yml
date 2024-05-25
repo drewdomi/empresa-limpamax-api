@@ -3,7 +3,14 @@ services:
     image: 'bitnami/mongodb:latest'
     environment:
       MONGODB_ROOT_USER: joao
-      MONGODB_ROOT_PASSWORD: dev
+      MONGODB_ROOT_PASSWORD: carlos
       MONGODB_DATABASE: mydb
+      MONGODB_REPLICA_SET_MODE: primary
+      MONGODB_REPLICA_SET_NAME: rs0
+      MONGODB_REPLICA_SET_KEY: carlos
     ports:
       - 27017:27017
+    volumes:
+      - mongodb_data:/bitnami/mongodb
+volumes:
+  mongodb_data:
