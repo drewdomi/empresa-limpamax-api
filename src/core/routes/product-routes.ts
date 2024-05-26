@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import { zodMiddleware } from '../middlewares/zod-middleware'
 import { productService } from '../services/product-service'
-import { createProductSchema } from '../utils/schemas/create-product'
+import { addQuantidadeProduto, createProductSchema } from '../utils/schemas/'
 
 const productRouter = Router()
 
@@ -11,6 +11,10 @@ productRouter.post(
   zodMiddleware(createProductSchema),
   productService.create,
 )
-productRouter.patch('/products/update/:cod_barras')
+productRouter.patch(
+  '/products/add',
+  zodMiddleware(addQuantidadeProduto),
+  productService.addQuantidade,
+)
 
 export { productRouter }

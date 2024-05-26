@@ -8,7 +8,6 @@ export const zodMiddleware =
     if (!isValidReqBody(req))
       return res.status(400).send({ message: 'Requesição inválida' })
     try {
-      console.log(req.body)
       await schema.parseAsync({ body: req.body })
       return next()
     } catch (error) {
