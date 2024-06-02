@@ -1,9 +1,14 @@
 services:
-  mongodb:
-    image: 'bitnami/mongodb:latest'
+  mongodb-limpa-max:
+    image: prismagraphql/mongo-single-replica:5.0.3
     environment:
-      MONGODB_ROOT_USER: joao
-      MONGODB_ROOT_PASSWORD: dev
-      MONGODB_DATABASE: mydb
+      MONGO_INITDB_ROOT_USERNAME: joao
+      MONGO_INITDB_ROOT_PASSWORD: carlos
+      MONGO_INITDB_DATABASE: mydb
     ports:
       - 27017:27017
+    volumes:
+      - mongodb-limpa-max:/mongodb
+
+volumes:
+  mongodb-limpa-max:
