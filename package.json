@@ -16,7 +16,7 @@
     "build": "tsc",
     "prisma-dev": "prisma generate && prisma db push",
     "prepare": "husky",
-    "postinstall": "prisma generate"
+    "postinstall": "pnpm prisma-dev"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
